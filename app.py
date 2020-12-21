@@ -8,7 +8,7 @@ import codecs
 from pandas_profiling import ProfileReport 
 
 # Components Pkgs
-import streamlit.components.v1 as components
+# import streamlit.components.v1 as components
 from streamlit_pandas_profiling import st_profile_report
 
 #Page Setup
