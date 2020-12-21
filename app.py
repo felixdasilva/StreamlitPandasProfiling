@@ -1,4 +1,8 @@
 
+#install Pkgs if it doesn't exist
+import sys
+!{sys.executable} -m pip install pandas_profiling
+
 # Core Pkgs
 import streamlit as st 
 
