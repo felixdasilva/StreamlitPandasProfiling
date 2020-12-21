@@ -5,11 +5,11 @@ import streamlit as st
 # EDA Pkgs
 import pandas as pd 
 import codecs
-from pandas_profiling import ProfileReport 
+from pandas-profiling import ProfileReport 
 
 # Components Pkgs
 import streamlit.components.v1 as components
-from streamlit_pandas_profiling import st_profile_report
+from streamlit-pandas-profiling import st_profile_report
 
 #Page Setup
 st.set_page_config(page_title="Data Quality Profling Tool",page_icon='ðŸ“ˆ',layout="wide", initial_sidebar_state="expanded")
