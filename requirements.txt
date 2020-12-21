@@ -1,1 +1,2 @@
 pandas_profiling
+streamlit_pandas_profiling
