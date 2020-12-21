@@ -33,7 +33,7 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
-    profile = pp.ProfileReport(df, minimal=True).to_html()
+    profile = pp.ProfileReport(df, minimal=True)
     # lepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
     #  download = st.button("Download Report")
