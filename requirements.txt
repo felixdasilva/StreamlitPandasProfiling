@@ -1,5 +1,5 @@
-pandas-profiling
-streamlit-pandas-profiling
+pandas_profiling
+streamlit_pandas_profiling
 streamlit.components.v1
 pandas
 codecs
