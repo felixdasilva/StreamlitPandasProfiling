@@ -9,7 +9,7 @@ import pandas_profiling as pp
 
 # Components Pkgs
 import streamlit.components.v1 as components
-import streamit_pandas_profiling as spp
+import streamlit_pandas_profiling as spp
 #from streamlit_pandas_profiling import st_profile_report
 
 st.set_page_config(page_title="Data Quality Profling Tool",page_icon='📈',layout="wide", initial_sidebar_state="expanded")
