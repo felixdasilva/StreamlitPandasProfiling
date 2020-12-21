@@ -27,7 +27,7 @@ def main():
     try:
       df = pd.read_csv(data_file)
     except:
-      df = pd.read_excel(data_file)
+      df = pd.read_excel(data_file, engine='openpyxl')
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
