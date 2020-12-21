@@ -5,11 +5,13 @@ import streamlit as st
 # EDA Pkgs
 import pandas as pd 
 import codecs
-from pandas_profiling import ProfileReport 
+import pandas_profiling as pp
+#from pandas_profiling import ProfileReport 
 
 # Components Pkgs
 import streamlit.components.v1 as components
-from streamlit_pandas_profiling import st_profile_report
+import streamlit_pandas_profiling as spp
+#from streamlit_pandas_profiling import st_profile_report
 
 #Page Setup
 st.set_page_config(page_title="Data Quality Profling Tool",page_icon='ðŸ“ˆ',layout="wide", initial_sidebar_state="expanded")
@@ -31,13 +33,13 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
-    profile = ProfileReport(df, minimal=True)
+    profile = pp.ProfileReport(df, minimal=True).to_html()
     # lepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
     #  download = st.button("Download Report")
     #  if download:
     #    profile.to_file(filepath+"\Data Quality Profile.html")   
-    st_profile_report(profile)
+    spp.st_profile_report(profile)
 
 
 if __name__ == '__main__':
