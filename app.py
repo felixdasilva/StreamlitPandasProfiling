@@ -32,7 +32,7 @@ def main():
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
     st.write (df)
-    profile = ProfileReport(df, minimal=True)
+    profile = df.ProfileReport()
     # lepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
     #  download = st.button("Download Report")
