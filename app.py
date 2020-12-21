@@ -5,7 +5,6 @@ import streamlit as st
 # EDA Pkgs
 import pandas as pd 
 import codecs
-import pandas-profiling
 from pandas_profiling import ProfileReport 
 
 # Components Pkgs
