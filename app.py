@@ -8,7 +8,7 @@ import codecs
 from pandas_profiling import ProfileReport 
 
 # Components Pkgs
-# import streamlit.components.v1 as components
+import streamlit.components.v1 as components
 from streamlit_pandas_profiling import st_profile_report
 
 #Page Setup
@@ -31,8 +31,9 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
+    st.write (df)
     profile = ProfileReport(df, minimal=True)
-    filepath = st.text_input("Where do you want to save the report?")
+    # lepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
     #  download = st.button("Download Report")
     #  if download:
