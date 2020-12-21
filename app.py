@@ -31,15 +31,14 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
-    profile = ProfileReport(df, minimal=True).to_html()
+    profile = ProfileReport(df, minimal=True)
     filepath = st.text_input("Where do you want to save the report?")
-    if filepath is not None:
-      download = st.button("Download Report")
-      if download:
-        profile.to_file(filepath+"\Data Quality Profile.html")   
+    #if filepath is not None:
+    #  download = st.button("Download Report")
+    #  if download:
+    #    profile.to_file(filepath+"\Data Quality Profile.html")   
     st_profile_report(profile)
-    components.html(profile, height=1000, width=1000)
-        
+
 
 if __name__ == '__main__':
   main()
