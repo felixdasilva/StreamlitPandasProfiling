@@ -1,15 +1,10 @@
-
-#install Pkgs if it doesn't exist
-import sys
-!{sys.executable} -m pip install pandas_profiling
-
 # Core Pkgs
 import streamlit as st 
 
 # EDA Pkgs
-import pandas as pd 
+import pandas as pd
 import codecs
-from pandas_profiling import ProfileReport 
+from pandas_profiling import ProfileReport
 
 # Components Pkgs
 import streamlit.components.v1 as components
