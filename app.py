@@ -30,11 +30,11 @@ def main():
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
     profile = ProfileReport(df, minimal=True)
-    filepath = st.text_input("Where do you want to save the report?")
-    if filepath is not None:
-      download = st.button("Download Report")
-      if download:
-        profile.to_file(filepath+"\Data Quality Profile.html")   
+    #filepath = st.text_input("Where do you want to save the report?")
+    #if filepath is not None:
+    #  download = st.button("Download Report")
+   #   if download:
+   #     profile.to_file(filepath+"\Data Quality Profile.html")   
     st_profile_report(profile)
         
 
