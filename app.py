@@ -18,7 +18,7 @@ st.sidebar.header("Read Me")
 st.sidebar.header("Help")
 st.sidebar.text_area("Need help? Let us know.")
 st.sidebar.button("Submit")
-st.sidebar.selectbox("asd",("a","b","c"))
+#st.sidebar.selectbox("asd",("a","b","c"))
 
 def main():
   #st.header("Data Quality Profling Tool")
