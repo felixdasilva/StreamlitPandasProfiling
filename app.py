@@ -10,6 +10,7 @@ from pandas_profiling import ProfileReport
 # Components Pkgs
 import streamlit.components.v1 as components
 from streamlit_pandas_profiling import st_profile_report
+import openpyxl
 
 #Page Setup
 st.set_page_config(page_title="Data Quality Profling Tool",page_icon='📈',layout="wide", initial_sidebar_state="expanded")
@@ -27,7 +28,7 @@ def main():
     try:
       df = pd.read_csv(data_file)
     except:
-      df = pd.read_excel(data_file)
+      df = pd.read_excel(data_file, engine='openpyxl')
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
