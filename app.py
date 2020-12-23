@@ -5,7 +5,9 @@ import streamlit as st
 # EDA Pkgs
 import pandas as pd 
 import codecs
-from pandas_profiling import ProfileReport 
+import pandas_profiling as pp
+import base64
+#from pandas_profiling import ProfileReport 
 
 # Components Pkgs
 import streamlit.components.v1 as components
@@ -32,13 +34,24 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     st.subheader("Data Quality Profile")
-    profile = ProfileReport(df, minimal=True)
+    profile = pp.ProfileReport(df, minimal=True)
+    profile.to_file('profile_report.html')
     #filepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
       #download = st.button("Download Report")
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
     st_profile_report(profile)
+    
+#Download File Command
+import os
+import base64
+def get_binary_file_downloader_html(bin_file, file_label='File'):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    bin_str = base64.b64encode(data).decode()
+    href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a>'
+    return href
         
 
 if __name__ == '__main__':
@@ -50,3 +63,4 @@ if __name__ == '__main__':
   </style>
   """
   st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+  st.markdown(get_binary_file_downloader_html('profile_report.html', 'HTML'), unsafe_allow_html=True)
