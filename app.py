@@ -37,6 +37,7 @@ def main():
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
     #st_profile_report(profile)
+    st.text("Please Wait...")
     st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
 
     
