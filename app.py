@@ -62,4 +62,4 @@ if __name__ == '__main__':
   </style>
   """
   st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-  st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
+#  st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
