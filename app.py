@@ -7,6 +7,7 @@ import pandas as pd
 import codecs
 import pandas_profiling as pp
 import base64
+import os
 #from pandas_profiling import ProfileReport 
 
 # Components Pkgs
@@ -39,14 +40,17 @@ def main():
     #st_profile_report(profile)
     
 #Download File Command
-import os
-import base64
-def get_binary_file_downloader_html(bin_file, file_label='File'):
-    with open(bin_file, 'rb') as f:
+    with open('profile_report.html', 'rb') as f:
         data = f.read()
     bin_str = base64.b64encode(data).decode()
-    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
-    return href
+    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename('profile_report.html')}">Download Data Quality Profile Report</a></h3>'
+
+#def get_binary_file_downloader_html(bin_file, file_label='File'):
+#    with open(bin_file, 'rb') as f:
+#        data = f.read()
+#    bin_str = base64.b64encode(data).decode()
+#    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
+#    return href
         
 
 if __name__ == '__main__':
