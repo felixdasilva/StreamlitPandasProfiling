@@ -28,7 +28,7 @@ def main():
       df = pd.read_excel(data_file, engine='openpyxl')
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
-    st.subheader("Data Quality Profile")
+    #st.subheader("Data Quality Profile")
     profile = pp.ProfileReport(df, minimal=True)
     profile.to_file('profile_report.html')
     #filepath = st.text_input("Where do you want to save the report?")
@@ -36,7 +36,7 @@ def main():
       #download = st.button("Download Report")
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
-    st_profile_report(profile)
+    #st_profile_report(profile)
     
 #Download File Command
 import os
