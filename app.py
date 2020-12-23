@@ -37,6 +37,7 @@ def main():
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
     #st_profile_report(profile)
+    DisplayLink = 1
     
 #Download File Command
 import os
@@ -45,8 +46,9 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     with open(bin_file, 'rb') as f:
         data = f.read()
     bin_str = base64.b64encode(data).decode()
-    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
-    return href
+    if DisplayLink = 1
+      href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
+      return href
         
 
 if __name__ == '__main__':
