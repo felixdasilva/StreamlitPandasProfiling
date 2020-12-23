@@ -37,7 +37,7 @@ def main():
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
     #st_profile_report(profile)
-  DisplayLink = 1
+    DisplayLink = 1
     
 #Download File Command
 import os
