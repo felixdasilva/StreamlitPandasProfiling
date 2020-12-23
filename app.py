@@ -40,17 +40,13 @@ def main():
     #st_profile_report(profile)
     
 #Download File Command
-    with open('profile_report.html', 'rb') as f:
+   
+def get_binary_file_downloader_html(bin_file, file_label='File'):
+    with open(bin_file, 'rb') as f:
         data = f.read()
     bin_str = base64.b64encode(data).decode()
-    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(profile_report.html)}">Download Data Quality Profile Report</a></h3>'
-
-#def get_binary_file_downloader_html(bin_file, file_label='File'):
-#    with open(bin_file, 'rb') as f:
-#        data = f.read()
-#    bin_str = base64.b64encode(data).decode()
-#    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
-#    return href
+    href = f'<h3><a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a></h3>'
+    return href
         
 
 if __name__ == '__main__':
@@ -62,4 +58,4 @@ if __name__ == '__main__':
   </style>
   """
   st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-#  st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
+  st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
