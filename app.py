@@ -47,7 +47,6 @@ def get_binary_file_downloader_html(bin_file, file_label='File'):
     bin_str = base64.b64encode(data).decode()
     href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a>'
     return href
-    st.markdown(get_binary_file_downloader_html('profile_report.html', 'HTML'), unsafe_allow_html=True)
         
 
 if __name__ == '__main__':
@@ -59,3 +58,4 @@ if __name__ == '__main__':
   </style>
   """
   st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+  st.markdown(get_binary_file_downloader_html('profile_report.html', 'HTML'), unsafe_allow_html=True)
