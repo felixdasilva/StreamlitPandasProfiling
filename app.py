@@ -1,18 +1,18 @@
 
 # Core Pkgs
-import streamlit as st 
+import streamlit as st
+import pandas_profiling as pp
 
 # EDA Pkgs
 import pandas as pd 
 import codecs
-import pandas_profiling as pp
 import base64
 import os
 #from pandas_profiling import ProfileReport 
 
 # Components Pkgs
 import streamlit.components.v1 as components
-from streamlit_pandas_profiling import st_profile_report
+#from streamlit_pandas_profiling import st_profile_report
 import openpyxl
 
 #Page Setup
