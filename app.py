@@ -30,6 +30,7 @@ def main():
     st.dataframe(df.head())
     #st.subheader("Data Quality Profile")
     profile = pp.ProfileReport(df, minimal=True)
+    st.text("Please wait for Report to generate...")
     profile.to_file('profile_report.html')
     #filepath = st.text_input("Where do you want to save the report?")
     #if filepath is not None:
@@ -37,7 +38,6 @@ def main():
       #if download:
         #profile.to_file(filepath+"\Data Quality Profile.html")   
     #st_profile_report(profile)
-    st.text("Please Wait...")
     st.markdown(get_binary_file_downloader_html('profile_report.html', 'Data Quality Profile Report'), unsafe_allow_html=True)
 
     
