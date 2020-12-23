@@ -2,5 +2,5 @@ pandas_profiling
 streamlit_pandas_profiling
 pandas
 openpyxl
-base64
+pybase64
 os
