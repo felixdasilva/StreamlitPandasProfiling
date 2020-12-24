@@ -29,7 +29,7 @@ def main():
     st.subheader("Sample Data from File")
     st.dataframe(df.head())
     #st.subheader("Data Quality Profile")
-    profile = pp.ProfileReport(df, minimal=True)
+    profile = pp.ProfileReport(df, title="Data Quality Profile Report", minimal=True)
     st.text("Please wait for Report to generate...")
     profile.to_file('profile_report.html')
     #filepath = st.text_input("Where do you want to save the report?")
