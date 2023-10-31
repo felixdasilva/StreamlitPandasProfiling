@@ -2,4 +2,4 @@ pandas_profiling
 streamlit_pandas_profiling
 pandas
 openpyxl
-pydantic-settings
+pydantic==1.8
