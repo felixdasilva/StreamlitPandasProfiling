@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import pandas_profiling as pp
+import ydata_profiling as pp
 import base64
 import os
 import openpyxl
