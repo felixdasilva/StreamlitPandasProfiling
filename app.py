@@ -6,6 +6,7 @@ import pandas as pd
 import codecs
 import pandas_profiling as pp
 import base64
+from pydantic_settings import BaseSettings
 import os
 #from pandas_profiling import ProfileReport 
 
